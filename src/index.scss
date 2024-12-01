@@ -1,0 +1,69 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+* {
+  font-family: 'Inter', system-ui;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+ul{
+  list-style-type: none;
+}
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+
+
+.content {
+  padding: 40px;
+  h1 {
+    margin: 0;
+  }
+  .content-title{
+  display: flex; 
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 40px;
+  }
+}
+.search-block {
+  display: flex;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  padding: 0 15px;
+
+
+  input {
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+     width: 200px;
+    // убрать обводку при нажатии
+    /* Border обычно используется для создания постоянной видимой границы элемента, в то время как outline используется для выделения элемента без влияния на вёрстку с целью повышения доступности.*/
+     &:focus{
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+  
+}
+/************************/
+.wrapper-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 20px;
+
+}

@@ -1,0 +1,19 @@
+.item {
+      
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #f3f3f3;
+      border-radius: 20px;
+      
+      //overflow: hidden;
+      padding: 20px;
+      .info {
+        margin: 0 12px;
+        h5 {
+          margin-bottom: 10px;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
