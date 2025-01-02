@@ -1,12 +1,12 @@
 import styles from "./Card.module.scss";
-import { useState } from "react";
+// import { useState } from "react";
 
-function Card({ imgURL, title, price, onPlus }) {
-  const [isAdded, setIsAdded] = useState(false);
+function Card({ imgURL, title, price, onPlus, onDel, isChecked }) {
+  // const [isAdded, setIsAdded] = useState(isChecked);
 
   const onClickPlus = () => {
-    setIsAdded(!isAdded);
-    onPlus();
+  isChecked = !isChecked;
+  (isChecked)? onPlus(): onDel();
   };
 
   return (
@@ -23,7 +23,7 @@ function Card({ imgURL, title, price, onPlus }) {
         </div>
         <img
           onClick={onClickPlus}
-          src={isAdded ? "img/checked.svg" : "img/plus.svg"}
+          src={isChecked ? "img/checked.svg" : "img/plus.svg"}
           alt="Добавить в корзину"
         />
       </div>
