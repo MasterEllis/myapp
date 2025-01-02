@@ -1,6 +1,6 @@
 import styles from "./Cart.module.scss";
 import CartItem from "../CartItem";
-
+import Info from "../Info";
 function Cart({ onDelete, onCloseCart, itemsCart = [] }) {
   return (
     <div className={styles.overlay}>
@@ -13,7 +13,8 @@ function Cart({ onDelete, onCloseCart, itemsCart = [] }) {
             alt="Закрыть корзину"
           />
         </h2>
-      
+        {itemsCart.length > 0 ? (
+          <>
             <div className={styles.items}>
               {itemsCart.map((obj) => (
                 <CartItem
@@ -43,7 +44,14 @@ function Cart({ onDelete, onCloseCart, itemsCart = [] }) {
                 Оформить заказ <img src="/img/arrow.svg" alt="" />
               </button>
             </div>
-          
+          </>
+        ) : (
+          <Info
+            title="Корзина пуста"
+            description="Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."
+            image="img/empty-cart.jpg"
+          />
+        )}
       </div>
     </div>
   );
